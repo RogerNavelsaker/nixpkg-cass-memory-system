@@ -1,0 +1,24 @@
+{
+  "source": {
+    "path": "upstream",
+    "channel": "github-head",
+    "defaultBranch": "main",
+    "version": "0.2.4",
+    "rev": "f11e11555e29868124e2e0c65ad66326027e2130"
+  },
+  "package": {
+    "repo": "cass-memory-system",
+    "version": "0.2.4"
+  },
+  "binary": {
+    "name": "cm",
+    "baseProgram": "cass-memory-system",
+    "entrypoint": "src/cm.ts",
+    "aliases": [ "cass-memory" ]
+  },
+  "meta": {
+    "description": "Procedural memory system for AI coding agents",
+    "homepage": "https://github.com/Dicklesworthstone/cass_memory_system",
+    "licenseSpdx": "MIT"
+  }
+}
