@@ -5,19 +5,21 @@
     "repo": "cass_memory_system",
     "channel": "github-head",
     "defaultBranch": "main",
-    "version": "0.2.4",
-    "rev": "f11e11555e29868124e2e0c65ad66326027e2130",
-    "hash": "sha256-ppfJOThUaEaoWm0yQqArsjNiQ6k9kxTWionB9r/D8Ao="
+    "version": "0.2.9",
+    "rev": "abe89b81d36d6cb359a95ac4442cf663f578c47f",
+    "hash": "sha256-rXp/2KEEEkADCZnxmIdh7n69MDFY/q1DbizutYV3/9Y="
   },
   "package": {
     "repo": "cass-memory-system",
-    "version": "0.2.4"
+    "version": "0.2.9"
   },
   "binary": {
     "name": "cm",
     "baseProgram": "cass-memory-system",
     "entrypoint": "src/cm.ts",
-    "aliases": [ "cass-memory" ]
+    "aliases": [
+      "cass-memory"
+    ]
   },
   "meta": {
     "description": "Procedural memory system for AI coding agents",
