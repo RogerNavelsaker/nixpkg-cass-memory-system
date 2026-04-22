@@ -1,12 +1,21 @@
-{ bash, bun, bun2nix, lib, makeWrapper, symlinkJoin }:
+{ bash, bun, bun2nix, fetchFromGitHub, lib, makeWrapper, runCommand, symlinkJoin }:
 
 let
   manifest = builtins.fromJSON (builtins.readFile ./package-manifest.json);
   baseProgram = manifest.binary.baseProgram or manifest.binary.name;
-  sourceRoot = builtins.path {
-    path = ../upstream;
-    name = "source";
+  upstreamSrc = fetchFromGitHub {
+    owner = manifest.source.owner;
+    repo = manifest.source.repo;
+    rev = manifest.source.rev;
+    hash = manifest.source.hash;
   };
+  packageSrc = runCommand "cass-memory-system-src" { } ''
+    mkdir -p "$out"
+    cp ${upstreamSrc}/package.json "$out/package.json"
+    cp ${upstreamSrc}/bun.lock "$out/bun.lock"
+    cp -R ${upstreamSrc}/scripts "$out/scripts"
+    cp -R ${upstreamSrc}/src "$out/src"
+  '';
   licenseMap = {
     "MIT" = lib.licenses.mit;
     "Apache-2.0" = lib.licenses.asl20;
@@ -30,8 +39,8 @@ EOF
   basePackage = bun2nix.writeBunApplication {
     pname = manifest.package.repo;
     version = manifest.package.version;
-    packageJson = ../upstream/package.json;
-    src = sourceRoot;
+    packageJson = packageSrc + "/package.json";
+    src = packageSrc;
     dontUseBunBuild = true;
     dontUseBunCheck = true;
     startScript = ''

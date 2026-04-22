@@ -1,10 +1,13 @@
 {
   "source": {
-    "path": "upstream",
+    "type": "github",
+    "owner": "Dicklesworthstone",
+    "repo": "cass_memory_system",
     "channel": "github-head",
     "defaultBranch": "main",
     "version": "0.2.4",
-    "rev": "f11e11555e29868124e2e0c65ad66326027e2130"
+    "rev": "f11e11555e29868124e2e0c65ad66326027e2130",
+    "hash": "sha256-ppfJOThUaEaoWm0yQqArsjNiQ6k9kxTWionB9r/D8Ao="
   },
   "package": {
     "repo": "cass-memory-system",
