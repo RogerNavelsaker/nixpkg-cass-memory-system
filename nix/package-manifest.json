@@ -6,8 +6,8 @@
     "channel": "github-head",
     "defaultBranch": "main",
     "version": "0.2.11",
-    "rev": "e3e9f063694fde4e87c712aa614f611c4b9ebd9a",
-    "hash": "sha256-uUR50DyFMH5lcDDuK4rHgu0Kpx7uYit1v6BYqkizYQc="
+    "rev": "523b6f9af912c6b6f0c52a6235886f0fdeb2c019",
+    "hash": "sha256-FwxgsUoVh8PKDKmlR3N8mjrTIUT+BCgSjNMAoe4TEU0="
   },
   "package": {
     "repo": "cass-memory-system",
