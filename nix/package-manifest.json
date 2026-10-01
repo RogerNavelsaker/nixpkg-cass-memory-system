@@ -5,13 +5,13 @@
     "repo": "cass_memory_system",
     "channel": "github-head",
     "defaultBranch": "main",
-    "version": "0.3.0",
-    "rev": "70fd38b55e54861546383a96a10bba6ded68e9bb",
-    "hash": "sha256-duvw4cX5WpOCFQlZ8hjOJCjYkUwPzgmpBHCLK4d9j3Q="
+    "version": "0.4.0",
+    "rev": "17d1fbfb6954a9257a0c792afb80fd8fc0ac101d",
+    "hash": "sha256-z5b3PrCtYn9zxEGYtjCYCTDL4zGlYBOgUo5apBDB6HU="
   },
   "package": {
     "repo": "cass-memory-system",
-    "version": "0.3.0"
+    "version": "0.4.0"
   },
   "binary": {
     "name": "cm",
